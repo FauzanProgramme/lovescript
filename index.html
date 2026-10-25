@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTIK B Class Hub - Dashboard Utama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+    <!-- Header Navigation Bawaan Langsung -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo PTIK B dengan Efek Neon -->
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="relative group flex items-center gap-2.5 bg-slate-900/90 border border-blue-500/40 hover:border-blue-400 px-3.5 py-1.5 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] overflow-hidden">
+                    <span class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
+                    <div class="relative flex items-center justify-center">
+                        <span class="absolute w-5 h-5 bg-blue-500/40 rounded-full animate-ping opacity-75"></span>
+                        <svg class="relative w-7 h-7 text-blue-400 group-hover:text-cyan-300 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 8C6 6.89543 6.89543 6 8 6H24C25.1046 6 26 6.89543 26 8V18C26 19.1046 25.1046 20 24 20H8C6.89543 20 6 19.1046 6 18V8Z" fill="#0F172A" stroke="currentColor" stroke-width="2"/>
+                            <path d="M11 11L14 13L11 15" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="15" x2="20" y2="15" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" class="animate-pulse"/>
+                            <path d="M3 23C3 21.8954 3.89543 21 5 21H27C28.1046 21 29 21.8954 29 23V24C29 25.1046 28.1046 26 27 26H5C3.89543 26 3 25.1046 3 24V23Z" fill="currentColor"/>
+                            <path d="M13 21H19V22C19 22.5523 18.5523 23 18 23H14C13.4477 23 13 22.5523 13 22V21Z" fill="#0284C7"/>
+                        </svg>
+                    </div>
+                    <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-wider text-lg">PTIK B</span>
+                </a>
+                <h1 class="text-xl font-semibold hidden sm:block">Class Hub</h1>
+            </div>
+
+            <!-- Menu Navigasi -->
+            <nav class="flex space-x-4 sm:space-x-6 text-sm font-medium overflow-x-auto py-1">
+                <a href="index.html" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1 whitespace-nowrap">Beranda</a>
+                <a href="tugas.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Tugas</a>
+                <a href="jadwal.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Jadwal</a>
+                <a href="anggota.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Anggota</a>
+                <a href="absensi.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Absensi</a>
+                <a href="galeri.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Galeri</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
+        
+        <!-- Hero Cyber Welcome Banner -->
+        <div class="relative overflow-hidden bg-gradient-to-r from-blue-900/50 via-slate-900 to-slate-900 border border-blue-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
+            <div class="absolute -right-12 -top-12 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute right-20 bottom-0 opacity-10 hidden lg:block pointer-events-none">
+                <i class="fa-solid fa-microchip text-9xl text-blue-400"></i>
+            </div>
+
+            <div class="space-y-4 max-w-2xl relative z-10">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-cyan-400 text-xs font-mono">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                    <span>WELCOME TO PTIK B CLASS HUB</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white leading-tight">
+                    Pusat Informasi & Manajemen Digital Kelas <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">PTIK B</span>
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Aplikasi portal kelas terpadu untuk memantau deadline tugas, jadwal perkuliahan harian, direktori mahasiswa, statistik kehadiran, serta galeri momen angkatan.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-3">
+                    <a href="tugas.html" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-xl text-xs transition shadow-lg shadow-blue-600/30 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check"></i> Cek Deadline Tugas
+                    </a>
+                    <a href="jadwal.html" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
+                        <i class="fa-regular fa-calendar"></i> Lihat Jadwal Kuliah
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metric Stat Cards Row -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-blue-500/40 p-5 rounded-2xl space-y-2 transition shadow-lg">
+                <div class="flex justify-between items-center text-blue-400">
+                    <span class="text-xs font-mono font-semibold uppercase">Total Tugas</span>
+                    <i class="fa-solid fa-tasks text-lg"></i>
+                </div>
+                <h3 id="dashTotalTugas" class="text-2xl font-black text-slate-100">0</h3>
+                <p class="text-[11px] text-slate-400"><span id="dashNearDeadline" class="text-amber-400 font-semibold">0</span> mendesak</p>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 p-5 rounded-2xl space-y-2 transition shadow-lg">
+                <div class="flex justify-between items-center text-emerald-400">
+                    <span class="text-xs font-mono font-semibold uppercase">Jadwal Kuliah</span>
+                    <i class="fa-solid fa-book-open text-lg"></i>
+                </div>
+                <h3 id="dashTotalMatkul" class="text-2xl font-black text-slate-100">0</h3>
+                <p class="text-[11px] text-slate-400">Mata Kuliah Semester Ini</p>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-amber-500/40 p-5 rounded-2xl space-y-2 transition shadow-lg">
+                <div class="flex justify-between items-center text-amber-400">
+                    <span class="text-xs font-mono font-semibold uppercase">Mahasiswa</span>
+                    <i class="fa-solid fa-users text-lg"></i>
+                </div>
+                <h3 id="dashTotalMhs" class="text-2xl font-black text-slate-100">0</h3>
+                <p class="text-[11px] text-slate-400">Pengurus & Anggota</p>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800 hover:border-purple-500/40 p-5 rounded-2xl space-y-2 transition shadow-lg">
+                <div class="flex justify-between items-center text-purple-400">
+                    <span class="text-xs font-mono font-semibold uppercase">Galeri Foto</span>
+                    <i class="fa-solid fa-images text-lg"></i>
+                </div>
+                <h3 id="dashTotalFoto" class="text-2xl font-black text-slate-100">0</h3>
+                <p class="text-[11px] text-slate-400">Dokumentasi Momen</p>
+            </div>
+        </div>
+
+        <!-- Section Grid Widgets Main Dashboard -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Widget 1: Tugas Mendekati Deadline (2 Cols) -->
+            <div class="lg:col-span-2 space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+                        <h3 class="font-bold text-slate-100 text-base">Tugas & Deadline Terdekat</h3>
+                    </div>
+                    <a href="tugas.html" class="text-xs text-blue-400 hover:underline">Lihat Semua <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <div id="dashTugasList" class="space-y-3"></div>
+            </div>
+
+            <!-- Widget 2: Jadwal Perkuliahan (1 Col) -->
+            <div class="space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-days text-blue-400"></i>
+                        <h3 class="font-bold text-slate-100 text-base">Jadwal Perkuliahan</h3>
+                    </div>
+                    <a href="jadwal.html" class="text-xs text-blue-400 hover:underline">Kelola <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <div id="dashJadwalList" class="space-y-3"></div>
+            </div>
+
+        </div>
+
+        <!-- Section Preview Galeri Terbaru -->
+        <div class="space-y-4 pt-4">
+            <div class="flex justify-between items-center border-b border-slate-800/80 pb-3">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-camera-retro text-purple-400"></i>
+                    <h3 class="font-bold text-slate-100 text-base">Dokumentasi Momen Terbaru</h3>
+                </div>
+                <a href="galeri.html" class="text-xs text-blue-400 hover:underline">Ke Galeri <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+            </div>
+
+            <div id="dashGaleriPreview" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
+        </div>
+
+    </main>
+
+    <!-- Footer Bawaan Langsung -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>&copy; 2026 PTIK B - Fauzan irsyad - Pendidikan Teknik Informatika dan Komputer.</p>
+            <p class="text-slate-600">Dikembangkan bersama untuk kemudahan akademis kelas.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase App & Realtime Database SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- Skrip Pemroses Data Dashboard Realtime dari Firebase -->
+    <script>
+        // Konfigurasi Firebase Realtime Database
+        const firebaseConfig = {
+            apiKey: "PASTE_API_KEY_KAMU_DI_SINI",
+            authDomain: "ptikb-hub.firebaseapp.com",
+            databaseURL: "https://ptikb-hub-default-rtdb.firebaseio.com",
+            projectId: "ptikb-hub",
+            storageBucket: "ptikb-hub.appspot.com",
+            messagingSenderId: "PASTE_SENDER_ID",
+            appId: "PASTE_APP_ID"
+        };
+
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        const db = firebase.database();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Realtime Sync Tugas
+            db.ref('tugas').on('value', (snapshot) => {
+                const data = snapshot.val();
+                const tugasData = data ? Object.values(data) : [];
+
+                document.getElementById('dashTotalTugas').innerText = tugasData.length;
+
+                const today = new Date();
+                const nearDeadlineCount = tugasData.filter(t => {
+                    if (!t.deadline) return false;
+                    const diffDays = Math.ceil((new Date(t.deadline) - today) / (1000 * 60 * 60 * 24));
+                    return diffDays >= 0 && diffDays <= 3;
+                }).length;
+                document.getElementById('dashNearDeadline').innerText = nearDeadlineCount;
+
+                const dashTugasList = document.getElementById('dashTugasList');
+                if (tugasData.length === 0) {
+                    dashTugasList.innerHTML = `<p class="text-xs text-slate-500 p-4 border border-dashed border-slate-800 rounded-xl text-center">Belum ada tugas tersimpan.</p>`;
+                } else {
+                    dashTugasList.innerHTML = '';
+                    tugasData.slice(0, 3).forEach(t => {
+                        dashTugasList.innerHTML += `
+                            <div class="bg-slate-900/60 border border-slate-800 hover:border-blue-500/30 p-4 rounded-xl flex items-center justify-between gap-4 transition">
+                                <div class="space-y-1">
+                                    <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] px-2 py-0.5 rounded font-mono font-semibold">${t.matkul || 'Tugas'}</span>
+                                    <h4 class="font-bold text-slate-200 text-sm">${t.judul || ''}</h4>
+                                </div>
+                                <span class="text-xs text-rose-400 font-mono bg-rose-500/10 border border-rose-500/20 px-2.5 py-1 rounded-lg font-semibold whitespace-nowrap">
+                                    <i class="fa-regular fa-clock mr-1"></i>${t.deadline || '-'}
+                                </span>
+                            </div>
+                        `;
+                    });
+                }
+            });
+
+            // Realtime Sync Jadwal
+            db.ref('jadwal').on('value', (snapshot) => {
+                const data = snapshot.val();
+                const jadwalData = data ? Object.values(data) : [];
+
+                document.getElementById('dashTotalMatkul').innerText = jadwalData.length;
+
+                const dashJadwalList = document.getElementById('dashJadwalList');
+                if (jadwalData.length === 0) {
+                    dashJadwalList.innerHTML = `<p class="text-xs text-slate-500 p-4 border border-dashed border-slate-800 rounded-xl text-center">Belum ada jadwal tersimpan.</p>`;
+                } else {
+                    dashJadwalList.innerHTML = '';
+                    jadwalData.slice(0, 3).forEach(j => {
+                        dashJadwalList.innerHTML += `
+                            <div class="bg-slate-900/60 border border-slate-800 p-3.5 rounded-xl space-y-1.5">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-emerald-400 font-semibold font-mono">${j.hari || 'Senin'}</span>
+                                    <span class="text-slate-400 font-mono">${j.jamMulai || '00:00'} - ${j.jamSelesai || '00:00'}</span>
+                                </div>
+                                <h5 class="font-bold text-slate-200 text-sm">${j.matkul || ''}</h5>
+                                <span class="text-[11px] text-cyan-400"><i class="fa-solid fa-location-dot mr-1"></i>Ruang: ${j.ruangan || '-'}</span>
+                            </div>
+                        `;
+                    });
+                }
+            });
+
+            // Realtime Sync Anggota
+            db.ref('anggota').on('value', (snapshot) => {
+                const data = snapshot.val();
+                const anggotaData = data ? Object.values(data) : [];
+                document.getElementById('dashTotalMhs').innerText = anggotaData.length;
+            });
+
+            // Realtime Sync Galeri
+            db.ref('galeri').on('value', (snapshot) => {
+                const data = snapshot.val();
+                const galeriData = data ? Object.values(data) : [];
+
+                document.getElementById('dashTotalFoto').innerText = galeriData.length;
+
+                const dashGaleriPreview = document.getElementById('dashGaleriPreview');
+                if (galeriData.length === 0) {
+                    dashGaleriPreview.innerHTML = `<p class="col-span-full text-xs text-slate-500 p-4 border border-dashed border-slate-800 rounded-xl text-center">Belum ada galeri dokumentasi.</p>`;
+                } else {
+                    dashGaleriPreview.innerHTML = '';
+                    galeriData.slice(0, 4).forEach(g => {
+                        dashGaleriPreview.innerHTML += `
+                            <div class="relative overflow-hidden rounded-xl border border-slate-800 h-28 group">
+                                <img src="${g.foto}" alt="${g.judul || 'Dokumentasi'}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent p-2 flex items-end">
+                                    <p class="text-[10px] font-semibold text-slate-200 truncate">${g.judul || ''}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

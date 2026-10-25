@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Momen - PTIK B Class Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+    <!-- Header Navigation Bawaan Langsung -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo PTIK B dengan Efek Neon -->
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="relative group flex items-center gap-2.5 bg-slate-900/90 border border-blue-500/40 hover:border-blue-400 px-3.5 py-1.5 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] overflow-hidden">
+                    <span class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
+                    <div class="relative flex items-center justify-center">
+                        <span class="absolute w-5 h-5 bg-blue-500/40 rounded-full animate-ping opacity-75"></span>
+                        <svg class="relative w-7 h-7 text-blue-400 group-hover:text-cyan-300 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 8C6 6.89543 6.89543 6 8 6H24C25.1046 6 26 6.89543 26 8V18C26 19.1046 25.1046 20 24 20H8C6.89543 20 6 19.1046 6 18V8Z" fill="#0F172A" stroke="currentColor" stroke-width="2"/>
+                            <path d="M11 11L14 13L11 15" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="15" x2="20" y2="15" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" class="animate-pulse"/>
+                            <path d="M3 23C3 21.8954 3.89543 21 5 21H27C28.1046 21 29 21.8954 29 23V24C29 25.1046 28.1046 26 27 26H5C3.89543 26 3 25.1046 3 24V23Z" fill="currentColor"/>
+                            <path d="M13 21H19V22C19 22.5523 18.5523 23 18 23H14C13.4477 23 13 22.5523 13 22V21Z" fill="#0284C7"/>
+                        </svg>
+                    </div>
+                    <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-wider text-lg">PTIK B</span>
+                </a>
+                <h1 class="text-xl font-semibold hidden sm:block">Class Hub</h1>
+            </div>
+
+            <!-- Menu Navigasi -->
+            <nav class="flex space-x-4 sm:space-x-6 text-sm font-medium overflow-x-auto py-1">
+                <a href="index.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Beranda</a>
+                <a href="tugas.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Tugas</a>
+                <a href="jadwal.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Jadwal</a>
+                <a href="anggota.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Anggota</a>
+                <a href="absensi.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Absensi</a>
+                <a href="galeri.html" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1 whitespace-nowrap">Galeri</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
+        
+        <!-- Header Banner Section -->
+        <div class="relative overflow-hidden bg-gradient-to-r from-blue-900/40 via-slate-900 to-slate-900 border border-blue-500/20 rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+                <div class="space-y-2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono">
+                        <i class="fa-solid fa-camera-retro animate-pulse"></i>
+                        <span>DOCUMENTATION & MEMORIES</span>
+                    </div>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-white">Galeri & Momen Kelas</h2>
+                    <p class="text-slate-400 text-sm max-w-xl">Dokumentasi kegiatan perkuliahan, acara makrab, prestasi, dan momen kebersamaan angkatan PTIK B.</p>
+                </div>
+
+                <button id="btnTambahFoto" class="relative group overflow-hidden bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-3 rounded-2xl text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 self-start md:self-auto">
+                    <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                    <i class="fa-solid fa-cloud-arrow-up text-base"></i> Unggah Dokumentasi
+                </button>
+            </div>
+
+            <!-- Mini Terminal Stats Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-6 mt-6 border-t border-slate-800 text-xs font-mono">
+                <div class="flex items-center gap-2 text-slate-300">
+                    <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+                    <span>Total Foto: <strong id="statTotalFoto" class="text-purple-400">0</strong></span>
+                </div>
+                <div class="flex items-center gap-2 text-slate-300">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+                    <span>Kategori Album: <strong class="text-white">3 Album</strong></span>
+                </div>
+                <div class="flex items-center gap-2 text-slate-300 col-span-2 sm:col-span-1">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                    <span>Storage: <strong class="text-cyan-400">Cloud Sync Active</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Album Kategori -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-800/80" id="filterGaleriContainer">
+            <button class="filter-galeri-btn bg-blue-600 text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition shadow-lg shadow-blue-600/20" data-kat="Semua">Semua Foto</button>
+            <button class="filter-galeri-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-kat="Perkuliahan">Perkuliahan</button>
+            <button class="filter-galeri-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-kat="Makrab & Acara">Makrab & Acara</button>
+            <button class="filter-galeri-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-kat="Prestasi">Prestasi</button>
+        </div>
+
+        <!-- Grid Foto Galeri -->
+        <div id="galeriContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+
+    </main>
+
+    <!-- Modal Form Unggah Foto -->
+    <div id="modalGaleri" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-lg p-6 rounded-3xl shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-image text-blue-400"></i>
+                    <h3 id="modalGaleriTitle" class="text-lg font-bold text-slate-100">Tambah Dokumentasi Foto</h3>
+                </div>
+                <button id="btnCloseModalGaleri" class="text-slate-400 hover:text-slate-200 transition">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <form id="formGaleri" class="space-y-4">
+                <input type="hidden" id="galeriId">
+                <input type="hidden" id="fotoExisting">
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Judul / Momen Acara</label>
+                    <input type="text" id="judulFoto" required placeholder="Contoh: Praktikum Pemrograman Web di Lab ICT" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Kategori Album</label>
+                        <select id="kategori" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                            <option value="Perkuliahan">Perkuliahan</option>
+                            <option value="Makrab & Acara">Makrab & Acara</option>
+                            <option value="Prestasi">Prestasi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Tanggal Acara</label>
+                        <input type="date" id="tanggalFoto" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Pilih File Foto Komputer</label>
+                    <input type="file" id="fileFoto" accept="image/*" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500 file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Atau Masukkan URL Gambar Web</label>
+                    <input type="url" id="urlFoto" placeholder="https://..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Keterangan / Deskripsi Singkat</label>
+                    <textarea id="keterangan" rows="2" placeholder="Catatan singkat dibalik momen foto ini..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500"></textarea>
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" id="btnBatalGaleri" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-medium transition">Batal</button>
+                    <button type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-medium transition shadow-lg shadow-blue-600/20">Simpan Foto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox Preview Foto -->
+    <div id="modalLightbox" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+        <div class="relative max-w-4xl w-full flex flex-col items-center">
+            <button id="btnCloseLightbox" class="absolute -top-10 right-0 text-white hover:text-slate-300 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Preview Momen" class="max-h-[80vh] w-auto rounded-2xl object-contain border border-slate-800 shadow-2xl">
+            <div class="mt-4 text-center space-y-1">
+                <h4 id="lightboxTitle" class="text-base font-bold text-slate-100"></h4>
+                <p id="lightboxDesc" class="text-xs text-slate-400 max-w-lg"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bawaan Langsung -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>&copy; 2026 PTIK B - Fauzan irsyad - Pendidikan Teknik Informatika dan Komputer.</p>
+            <p class="text-slate-600">Dikembangkan bersama untuk kemudahan akademis kelas.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase App & Realtime Database SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- Skrip CRUD khusus fitur Galeri -->
+    <script src="assets/js/crud-galeri.js"></script>
+</body>
+</html>

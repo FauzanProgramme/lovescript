@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Perkuliahan - PTIK B Class Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+    <!-- Header Navigation Bawaan Langsung -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo PTIK B dengan Efek Neon -->
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="relative group flex items-center gap-2.5 bg-slate-900/90 border border-blue-500/40 hover:border-blue-400 px-3.5 py-1.5 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] overflow-hidden">
+                    <span class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
+                    <div class="relative flex items-center justify-center">
+                        <span class="absolute w-5 h-5 bg-blue-500/40 rounded-full animate-ping opacity-75"></span>
+                        <svg class="relative w-7 h-7 text-blue-400 group-hover:text-cyan-300 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 8C6 6.89543 6.89543 6 8 6H24C25.1046 6 26 6.89543 26 8V18C26 19.1046 25.1046 20 24 20H8C6.89543 20 6 19.1046 6 18V8Z" fill="#0F172A" stroke="currentColor" stroke-width="2"/>
+                            <path d="M11 11L14 13L11 15" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="15" x2="20" y2="15" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" class="animate-pulse"/>
+                            <path d="M3 23C3 21.8954 3.89543 21 5 21H27C28.1046 21 29 21.8954 29 23V24C29 25.1046 28.1046 26 27 26H5C3.89543 26 3 25.1046 3 24V23Z" fill="currentColor"/>
+                            <path d="M13 21H19V22C19 22.5523 18.5523 23 18 23H14C13.4477 23 13 22.5523 13 22V21Z" fill="#0284C7"/>
+                        </svg>
+                    </div>
+                    <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-[length:200%_auto] bg-clip-text text-transparent font-black tracking-wider text-lg">PTIK B</span>
+                </a>
+                <h1 class="text-xl font-semibold hidden sm:block">Class Hub</h1>
+            </div>
+
+            <!-- Menu Navigasi -->
+            <nav class="flex space-x-4 sm:space-x-6 text-sm font-medium overflow-x-auto py-1">
+                <a href="index.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Beranda</a>
+                <a href="tugas.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Tugas</a>
+                <a href="jadwal.html" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1 whitespace-nowrap">Jadwal</a>
+                <a href="anggota.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Anggota</a>
+                <a href="absensi.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Absensi</a>
+                <a href="galeri.html" class="text-slate-400 hover:text-blue-400 transition whitespace-nowrap">Galeri</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
+        
+        <!-- Header Banner Section -->
+        <div class="relative overflow-hidden bg-gradient-to-r from-blue-900/40 via-slate-900 to-slate-900 border border-blue-500/20 rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+                <div class="space-y-2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono">
+                        <i class="fa-regular fa-calendar-check animate-pulse"></i>
+                        <span>SEMESTER GANJIL 2026</span>
+                    </div>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-white">Jadwal Perkuliahan Mingguan</h2>
+                    <p class="text-slate-400 text-sm max-w-xl">Informasi ruang kuliah, dosen pengampu, waktu pelaksanaan, serta distribusi SKS kelas PTIK B.</p>
+                </div>
+
+                <button id="btnTambahJadwal" class="relative group overflow-hidden bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-3 rounded-2xl text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 self-start md:self-auto">
+                    <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                    <i class="fa-solid fa-plus-circle text-base"></i> Tambah Jadwal Baru
+                </button>
+            </div>
+
+            <!-- Mini Terminal Stats Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-6 mt-6 border-t border-slate-800 text-xs font-mono">
+                <div class="flex items-center gap-2 text-slate-300">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+                    <span>Total Beban: <strong class="text-blue-400">20 SKS</strong></span>
+                </div>
+                <div class="flex items-center gap-2 text-slate-300">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                    <span>Mata Kuliah: <strong id="statTotalMatkul" class="text-white">0</strong></span>
+                </div>
+                <div class="flex items-center gap-2 text-slate-300 col-span-2 sm:col-span-1">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                    <span>Status: <strong class="text-cyan-400">Cloud Sync Active</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Hari Perkuliahan -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-800/80" id="filterHariContainer">
+            <button class="filter-hari-btn bg-blue-600 text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition shadow-lg shadow-blue-600/20" data-hari="Semua">Semua Hari</button>
+            <button class="filter-hari-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-hari="Senin">Senin</button>
+            <button class="filter-hari-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-hari="Selasa">Selasa</button>
+            <button class="filter-hari-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-hari="Rabu">Rabu</button>
+            <button class="filter-hari-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-hari="Kamis">Kamis</button>
+            <button class="filter-hari-btn bg-slate-900 border border-slate-800 text-slate-400 hover:text-white px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition" data-hari="Jumat">Jumat</button>
+        </div>
+
+        <!-- Container Grid Kartu Jadwal -->
+        <div id="jadwalContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </main>
+
+    <!-- Modal Form Jadwal -->
+    <div id="modalJadwal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-lg p-6 rounded-3xl shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-plus text-blue-400"></i>
+                    <h3 id="modalJadwalTitle" class="text-lg font-bold text-slate-100">Tambah Jadwal Baru</h3>
+                </div>
+                <button id="btnCloseModalJadwal" class="text-slate-400 hover:text-slate-200 transition">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <form id="formJadwal" class="space-y-4">
+                <input type="hidden" id="jadwalId">
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Mata Kuliah</label>
+                    <input type="text" id="matkulJadwal" required placeholder="Contoh: Computational Thinking" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Dosen Pengampu</label>
+                    <input type="text" id="dosen" required placeholder="Contoh: Dr. Nama Dosen, M.Pd." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Hari</label>
+                        <select id="hari" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jumat">Jumat</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Jumlah SKS</label>
+                        <input type="number" id="sks" min="1" max="6" value="2" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Ruangan</label>
+                        <input type="text" id="ruangan" required placeholder="AE 105 / Lab ICT 4" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Jam Mulai</label>
+                        <input type="time" id="jamMulai" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Jam Selesai</label>
+                        <input type="time" id="jamSelesai" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" id="btnBatalJadwal" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-medium transition">Batal</button>
+                    <button type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-medium transition shadow-lg shadow-blue-600/20">Simpan Jadwal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Bawaan Langsung -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>&copy; 2026 PTIK B - Fauzan irsyad - Pendidikan Teknik Informatika dan Komputer.</p>
+            <p class="text-slate-600">Dikembangkan bersama untuk kemudahan akademis kelas.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase App & Realtime Database SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- Skrip CRUD khusus fitur Jadwal -->
+    <script src="assets/js/crud-jadwal.js"></script>
+</body>
+</html>
